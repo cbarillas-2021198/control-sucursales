@@ -31,7 +31,7 @@ router.put('/editar/:id', [
 ], PutEmpresa);
 
 router.delete('/eliminar/:id', [
-    validarJWT,
+ 
     check('id', "id de mongo no existe").isMongoId(),
     check('id').custom(existIdOfEmpresa),
     validarCampos

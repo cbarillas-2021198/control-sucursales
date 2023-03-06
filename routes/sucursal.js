@@ -7,16 +7,11 @@ const { validarJWT } = require('../middlewares/validar-jwt');
 
 const router = Router();
 
-
-
-
 router.post('/agregar',[
     validarJWT,
     check('nombre','el nombre es obligatorio para agregar').not().isEmpty(),
     validarCampos
 ], postSucursal);
-
-
 
 router.put('/editar/:id',[
     validarJWT,
